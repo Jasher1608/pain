@@ -4,7 +4,13 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField] private KeyCode left;
+    [SerializeField] private KeyCode right;
+    [SerializeField] private KeyCode up;
+    [SerializeField] private KeyCode down;
+    [SerializeField] private KeyCode jump;
     [SerializeField] private float moveSpeed;
+    [SerializeField] private float jumpForce;
 
     private Vector2 velocity;
 
@@ -17,14 +23,14 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        // Get the horizontal input (left and right arrow keys, A and D keys, or joystick)
-        float horizontalInput = Input.GetAxisRaw("Horizontal");
-
-        // Calculate the velocity vector
-        velocity = new Vector2(horizontalInput * moveSpeed, rb.velocity.y);
-
-        // Apply the velocity to the Rigidbody
-        rb.velocity = velocity;
+        if (Input.GetKey(left))
+        {
+            velocity = new Vector2(-1 * moveSpeed * Time.deltaTime, rb.velocity.y);
+        }
+        else if (Input.GetKey(right))
+        {
+            velocity = new Vector2(1 * moveSpeed * Time.deltaTime, rb.velocity.y);
+        }
     }
 
     private void FixedUpdate()

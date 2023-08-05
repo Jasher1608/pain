@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 29921767}
   - component: {fileID: 29921766}
   - component: {fileID: 29921765}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Link 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -192,7 +192,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -289,7 +289,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &454492152
 Transform:
   m_ObjectHideFlags: 0
@@ -339,7 +339,7 @@ DistanceJoint2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 454492151}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   m_EnableCollision: 0
   m_ConnectedRigidBody: {fileID: 1094400139}
@@ -350,7 +350,7 @@ DistanceJoint2D:
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 1
   m_Distance: 0.96
-  m_MaxDistanceOnly: 0
+  m_MaxDistanceOnly: 1
 --- !u!233 &454492155
 HingeJoint2D:
   m_ObjectHideFlags: 0
@@ -615,7 +615,7 @@ GameObject:
   - component: {fileID: 1053008263}
   - component: {fileID: 1053008262}
   - component: {fileID: 1053008264}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -727,6 +727,8 @@ GameObject:
   - component: {fileID: 1094400140}
   - component: {fileID: 1094400139}
   - component: {fileID: 1094400142}
+  - component: {fileID: 1094400143}
+  - component: {fileID: 1094400144}
   m_Layer: 0
   m_Name: Player 2
   m_TagString: Untagged
@@ -833,11 +835,49 @@ CapsuleCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: -0.021255508, y: -0.03125809}
   m_Size: {x: 0.2024695, y: 0.2574838}
   m_Direction: 0
+--- !u!251 &1094400143
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1094400138}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 128
+  m_RotationalOffset: 0
+  m_UseOneWay: 0
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
+--- !u!114 &1094400144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1094400138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a62375533028d18478816d9594c2887a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  left: 276
+  right: 275
+  up: 273
+  down: 274
+  jump: 256
+  moveSpeed: 0
+  jumpForce: 0
 --- !u!1 &1184972603
 GameObject:
   m_ObjectHideFlags: 0
@@ -852,7 +892,7 @@ GameObject:
   - component: {fileID: 1184972606}
   - component: {fileID: 1184972605}
   - component: {fileID: 1184972609}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Link 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -908,7 +948,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -933,7 +973,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!212 &1184972608
 SpriteRenderer:
@@ -1024,7 +1064,7 @@ GameObject:
   - component: {fileID: 1323247592}
   - component: {fileID: 1323247591}
   - component: {fileID: 1323247590}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Link 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1080,7 +1120,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1173,7 +1213,7 @@ GameObject:
   - component: {fileID: 1476043236}
   - component: {fileID: 1476043235}
   - component: {fileID: 1476043234}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Link 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1253,7 +1293,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1345,7 +1385,7 @@ GameObject:
   - component: {fileID: 1513693133}
   - component: {fileID: 1513693132}
   - component: {fileID: 1513693131}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Link 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1401,7 +1441,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1493,6 +1533,7 @@ GameObject:
   - component: {fileID: 1615641886}
   - component: {fileID: 1615641889}
   - component: {fileID: 1615641890}
+  - component: {fileID: 1615641891}
   m_Layer: 0
   m_Name: Player 1
   m_TagString: Untagged
@@ -1600,7 +1641,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a62375533028d18478816d9594c2887a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  left: 97
+  right: 100
+  up: 119
+  down: 115
+  jump: 32
   moveSpeed: 3
+  jumpForce: 0
 --- !u!70 &1615641890
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -1612,11 +1659,30 @@ CapsuleCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: -0.007384084, y: -0.029536322}
   m_Size: {x: 0.1786476, y: 0.2672566}
   m_Direction: 0
+--- !u!251 &1615641891
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1615641884}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 128
+  m_RotationalOffset: 0
+  m_UseOneWay: 0
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &1866933358
 GameObject:
   m_ObjectHideFlags: 0
@@ -1630,7 +1696,7 @@ GameObject:
   - component: {fileID: 1866933362}
   - component: {fileID: 1866933361}
   - component: {fileID: 1866933360}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Link 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1686,7 +1752,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
